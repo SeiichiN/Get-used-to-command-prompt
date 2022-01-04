@@ -54,7 +54,7 @@
 \vspace{3mm}
 
 
-\fbox{\quad C:\\Users\\User$>$ \quad} はプロンプトといい、現在の位置を
+\fbox{C:\\Users\\User$>$} はプロンプトといい、現在の位置を
 ユーザーに示している。
 また、$>$ という文字列に続けて文字を入力できることを示している。
 
@@ -62,7 +62,7 @@
 
 試しに以下のコマンドを入力して $<$Enterキー$>$ を押してみる。
 
-\fbox{\quad ver \quad}
+\fbox{ver}
 
 \vspace{3mm}
 \includegraphics[width=12cm]{img/cmd-02-ver.png}
@@ -72,7 +72,7 @@ Windowsのバージョンが表示される。
 
 今度は以下のコマンドを入力する。($<$Enterキー$>$も)
 
-\fbox{\quad date \quad}
+\fbox{date}
 
 現在の日付が表示されて、次の行で
 ``新しい日付を入力してください: (年-月-日)``
@@ -134,14 +134,14 @@ CUI --- Character User Interface
 
 そこで、以下のコマンドを入力する。
 
-\fbox{\quad cd \ Desktop \quad} $<$Enterキー$>$
+\fbox{cd \ Desktop} $<$Enterキー$>$
 
-コマンドプロンプトが ``C:\yen users\yen USER\yen Desctop''
+コマンドプロンプトが ``C:\yen users\yen USER\yen Desktop''
 となる。
 
 以下のコマンドを入力する。
 
-\fbox{\quad dir \quad} $<$Enter$>$
+\fbox{dir} $<$Enter$>$
 
 以下のように、そのフォルダにあるファイルやフォルダが表示される。
 
@@ -153,7 +153,7 @@ CUI --- Character User Interface
 
 hello.bat は以下のようにして実行できる。
 
-\fbox{\quad hello \quad}
+\fbox{hello}
 
 \vspace{3mm}
 \includegraphics[width=15cm]{img/cmd-05-hello.png}
@@ -171,8 +171,8 @@ hello.bat は以下のようにして実行できる。
 
 拡張子は ``.bat''である。
 
-``\@echo off'' は、コマンド文字列を表示させないためのものである。
-
+``echo off'' は、コマンド文字列を画面に表示させないためのものである。
+``@'' は、そのコマンドを画面に表示させないためのものである。
 
 \section{コマンドプロンプトによるディレクトリ(フォルダ)の移動}
 
@@ -320,7 +320,7 @@ some.txt ということになる。(some.txtが存在するとして)
 \vspace{3mm}
 
 \newpage
-\section{追加情報}
+\section{いろいろな情報}
 
 \subsection{環境変数を画面に出力する}
 
@@ -392,6 +392,8 @@ some.txt ということになる。(some.txtが存在するとして)
 
 また、``Enterキー'' を押すと、1行ずつ上にずれて表示される。
 
+``q'' を押すと、画面出力の MORE表示から抜けることができる。
+
 \subsection{役に立つ(かもしれない)コマンド}
 
 \subsubsection{ポート番号を調べる}
@@ -461,4 +463,4 @@ Wifiを使用しているなら、``Wireless LAN adapter Wi-Fi'' の項目を見
 
 \include{end}
 
-%% 修正時刻： Tue Jan  4 13:47:39 2022
+%% 修正時刻： Tue Jan  4 14:59:30 2022
