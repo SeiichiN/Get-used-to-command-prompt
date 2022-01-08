@@ -1,0 +1,37 @@
+\documentclass[dvipdfmx]{jsarticle}
+
+\include{begin}
+
+\section{まとめ}
+
+\subsection{コマンド}
+
+\begin{tabular}{|ll|} \hline
+ dir & 現在のディレクトリ(フォルダ)の一覧を表示する \\
+ dir \ /w & dir を横並びで表示する \\
+ dir \ /p & dir を1画面ごとにページ表示する \\
+ cd & 現在のパス(位置)を表示する  \\
+ cd \ \verb!<パス>! & \verb!<パス>! の位置に移動する \\
+ cd \ .. & 一つ上のディレクトリ(ホーム)に移動する \\
+ type \ \verb!<ファイル>! & ファイルの内容を表示する \\ 
+ more \ \verb!<ファイル>! & ファイルの内容を1画面ごとに表示する \\
+ $>$ & 出力先を画面から(たとえば)ファイルに変える。(例) dir \verb!>! dir.txt \\
+ \textbar (バーティカルバー) & コマンドをつなげる。(例) dir | more \\ \hline
+\end{tabular}
+
+\subsection{その他}
+
+\begin{tabular}{|l|l|} \hline
+ $\uparrow$ $\downarrow$ & ヒストリー機能(過去のコマンド履歴を表示) \\
+ \verb![F7]! & 履歴一覧。 $\uparrow$ $\downarrow$ で選択、実行 \\ 
+ TABキー & 入力補完 \\
+ \%環境変数\%  & 環境変数の内容 \\
+ cd \ \%HOME\% & ホームディレクトリ(ホームフォルダ) に移動する \\ \hline
+\end{tabular}
+
+
+
+
+\include{end}
+
+%% 修正時刻： Sun Jan  9 07:59:24 2022
