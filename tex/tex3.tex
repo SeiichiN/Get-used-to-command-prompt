@@ -1,0 +1,55 @@
+\documentclass[dvipdfmx]{jsarticle}
+
+\include{begin}
+
+\section{コマンドを作成する}
+
+簡単なコマンドを作成してみる。
+以下のコードをテラパッドなどで入力して、``hello.bat''として保存する。
+保存先は デスクトップ にしておく。
+
+\begin{lstlisting}[caption=hello.bat]
+ @echo off
+ echo こんにちは
+\end{lstlisting}
+
+現在いる位置はコマンドプロンプトに表示されている。
+``C:\yen users\yen USER''である。
+
+そこで、以下のコマンドを入力する。
+
+\fbox{cd \ Desktop} $<$Enterキー$>$
+
+コマンドプロンプトが ``C:\yen users\yen USER\yen Desktop''
+となる。
+
+\rightline{
+(このとき、\fbox{cd \ De} まで入力したら、\textgt{TABキー} を押すと
+\fbox{cd \ Desktop} と補完してくれる。)}
+
+以下のコマンドを入力する。
+
+\fbox{dir} $<$Enter$>$
+
+以下のように、そのフォルダにあるファイルやフォルダが表示される。
+
+\vspace{3mm}
+\includegraphics[width=12cm]{img/cmd-04-dir.png}
+\vspace{3mm}
+
+その中に ``hello.bat'' があることを確認する。
+
+hello.bat は以下のようにして実行できる。
+
+\fbox{hello}
+
+\vspace{3mm}
+\includegraphics[width=15cm]{img/cmd-05-hello.png}
+\vspace{3mm}
+
+
+
+
+\include{end}
+
+%% 修正時刻： Fri 2022/08/12 06:43:310

@@ -118,52 +118,6 @@ CUI --- Character User Interface
 ``help''と入力すれば、コマンド(アプリ)の一覧が表示される。中にはシステムの改変を行うコマンドもあるので、表示されたコマンドを不用意に実行してはいけない。
 
 
-\subsection{コマンドを作成する}
-
-簡単なコマンドを作成してみる。
-以下のコードをテラパッドなどで入力して、``hello.bat''として保存する。
-保存先は デスクトップ にしておく。
-
-\begin{lstlisting}[caption=hello.bat]
- @echo off
- echo こんにちは
-\end{lstlisting}
-
-現在いる位置はコマンドプロンプトに表示されている。
-``C:\yen users\yen USER''である。
-
-そこで、以下のコマンドを入力する。
-
-\fbox{cd \ Desktop} $<$Enterキー$>$
-
-コマンドプロンプトが ``C:\yen users\yen USER\yen Desktop''
-となる。
-
-\rightline{
-(このとき、\fbox{cd \ De} まで入力したら、\textgt{TABキー} を押すと
-\fbox{cd \ Desktop} と補完してくれる。)}
-
-以下のコマンドを入力する。
-
-\fbox{dir} $<$Enter$>$
-
-以下のように、そのフォルダにあるファイルやフォルダが表示される。
-
-\vspace{3mm}
-\includegraphics[width=12cm]{img/cmd-04-dir.png}
-\vspace{3mm}
-
-その中に ``hello.bat'' があることを確認する。
-
-hello.bat は以下のようにして実行できる。
-
-\fbox{hello}
-
-\vspace{3mm}
-\includegraphics[width=15cm]{img/cmd-05-hello.png}
-\vspace{3mm}
-
-
 \subsection{バッチファイル}
 
 今作成した ``hello.bat'' はバッチファイルと呼ばれるもので、
@@ -178,6 +132,9 @@ hello.bat は以下のようにして実行できる。
 ``echo off'' は、コマンド文字列を画面に表示させないためのものである。
 ``@'' は、そのコマンドを画面に表示させないためのものである。
 
+
+
+
 \section{コマンドプロンプトによるディレクトリ(フォルダ)の移動}
 
 コマンドプロンプトには「現在の位置」が表示される。
@@ -185,11 +142,11 @@ hello.bat は以下のようにして実行できる。
 
 スタート・メニューからコマンドプロンプトを起動した場合、
 
-\fbox{C:\yen Users\yen USER} と表示される。
+\fbox{C:\yen Users\yen user} と表示される。
 この場所を \textgt{ホームディレクトリ} あるいは \textgt{ホームフォルダ}
 という。
 
-また、この ``C:\yen Users\yen USER'' を \textgt{パス} という。
+また、この ``C:\yen Users\yen user'' を \textgt{パス} という。
 
 この場所で \fbox{dir} とすると、この場所にあるファイルやディレクトリ(フォルダ)の一覧が表示される。
 
@@ -209,8 +166,7 @@ Videos --- ビデオ \\ \hline
 とすると、横に広げてディレクトリ(フォルダ)の状態を一覧できる。
 
 
-先程作成した ``hello.bat'' を実行するためには デスクトップ に移動する必要がある。\fbox{cd \ desktop} とすると、移動できるし、そこでなら ``hello.bat''は
-実行できるが、今は移動せずにこのままでいることにする。
+たとえば、デスクトップ に移動するには、\fbox{cd \ desktop} とする。
 
 \fbox{dir} とすると、たくさんのファイルやフォルダがあるので、
 画面の上に過ぎ去ってしまう。
@@ -240,21 +196,29 @@ some.txt ということになる。(some.txtが存在するとして)
 
 \section{システム環境変数の PATH への登録}
 
-デスクトップに hello.bat を作成したが、デスクトップにコマンド置き場として
-``myApp''というフォルダを作成し、その中に hello.bat を置くことにする。
+テラパッドを起動するには、デスクトップのテラパッド・アイコンをダブルクリックするとか、
+メニューから起動するとかしなければならない。
 
-\vspace{3mm}
-\includegraphics[width=8cm]{img/cmd-07.png}
-\vspace{3mm}
+先ほどのコマンドプロンプトにて、\fbox{ terapad } <Enter> としても起動できない。
 
-この hello.bat を実行しようとすると、現状では
-``C:\yen Users\yen USER\yen Desktop\yen myApp'' に移動しなくてはならない。
+しかし、\fbox{terapad.exe} (テラパッド本体) のあるフォルダに移動し、
 
-\fbox{cd \ C:\yen Users\yen USER\yen Desktop\yen myApp}
+\hspace{6mm}
+> \fbox{ cd \ ``c:\yen Users\yen user\yen Program Files(x86)\yen terapad''}
 
-しかし、Windowsには ``システム環境変数''という仕組みがあり、そこに
-``PATH''という変数が用意されていて、その変数に、``myApp'' のフォルダを
-登録すると、このコンピュータのどこからでも hello.bat を呼び出すことができる。
+そのフォルダで
+
+\hspace{6mm}
+> \fbox{ terapad } <Enter>
+
+とすると、テラパッドを起動できる
+
+この ''テラパッド本体'' のある場所を PC の覚えさせると、どこからでもコマンドプロンプトから
+起動できるようになる。
+
+Windowsには ``システム環境変数''という仕組みがあり、そこに
+``PATH''という変数が用意されていて、その変数に、``terapad'' のフォルダを
+登録すると、このコンピュータのどこからでも terapad を呼び出すことができる。
 
 \subsection{システム環境変数の編集}
 
@@ -467,4 +431,4 @@ Wifiを使用しているなら、``Wireless LAN adapter Wi-Fi'' の項目を見
 
 \include{end}
 
-%% 修正時刻： Sun Jan  9 06:52:07 2022
+%% 修正時刻： Fri 2022/08/12 06:43:312
