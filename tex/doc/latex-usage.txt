@@ -4,9 +4,14 @@ C-c C-b SPC
 
 
 コードを記述
-\begin{lstlisting}[caption=XXXXXXXXX,label=YYYYYYYY]
-                    \usepackage{color}
-                    \usepackage{listings, plisting}
+\begin{lstlisting}[
+  caption=XXXXXXXXX,
+  label=YYYYYYYY,
+  numbers=left(初期値) / none(行番号なし),
+  language=php / java / JavaScript
+]
+\usepackage{color}
+\usepackage{listings, plisting}
 
 boxで囲む
 \begin{tcolorbox}  \usepackage{tcolorbox}

@@ -118,20 +118,6 @@ CUI --- Character User Interface
 ``help''と入力すれば、コマンド(アプリ)の一覧が表示される。中にはシステムの改変を行うコマンドもあるので、表示されたコマンドを不用意に実行してはいけない。
 
 
-\subsection{バッチファイル}
-
-今作成した ``hello.bat'' はバッチファイルと呼ばれるもので、
-コンピュータに与えるコマンドを手順として多数記述しておいて、
-それらを実行させるものである。``スクリプト''とも呼ばれる。
-
-今作成したのは簡単な手順であるが、業務で使われる場合は
-複雑なものとなる。
-
-拡張子は ``.bat''である。
-
-``echo off'' は、コマンド文字列を画面に表示させないためのものである。
-``@'' は、そのコマンドを画面に表示させないためのものである。
-
 
 
 
@@ -206,6 +192,15 @@ some.txt ということになる。(some.txtが存在するとして)
 \hspace{6mm}
 > \fbox{ cd \ ``c:\yen Program Files (x86)\yen terapad''}
 
+\begin{tcolorbox}
+ 「Program Files (x86)」の中に半角空白が入っているのに注意する。
+ 昔はファイル名やフォルダ名に半角空白は使えなかった。しかし、現在のWindowsでは
+ 半角空白を使える。ただし、今回のようにコマンドの中で使うためには、フォルダ名
+ 全体を''(ダブルクォーテーション)で囲む必要がある。でないと、コマンドの切れ目
+ との区別ができない。
+\end{tcolorbox}
+
+
 そのフォルダで
 
 \hspace{6mm}
@@ -219,7 +214,7 @@ some.txt ということになる。(some.txtが存在するとして)
 
 としてもテラパッドを起動できる。
 
-この ''テラパッド本体'' のある場所を PC の覚えさせると、どこからでもコマンドプロンプトから
+この ''テラパッド本体'' のある場所を PC に覚えさせると、どこからでもコマンドプロンプトから
 起動できるようになる。
 
 Windowsには ``システム環境変数''という仕組みがあり、そこに
@@ -265,13 +260,13 @@ Windowsには ``システム環境変数''という仕組みがあり、そこ�
 \includegraphics[width=8cm]{img/cmd-11.png}
 \vspace{3mm}
 
-開いたダイアログで デスクトップの ``myApp'' を選択して ``OK''。
+開いたダイアログで C:\yen Program Files (x86)\yen terapad を選択して ``OK''。
 
 \vspace{3mm}
 \includegraphics[width=8cm]{img/cmd-12.png}
 \vspace{3mm}
 
-``C:\yen Users\yen USER\yen Desktop\yen myApp'' が環境変数''Path'' に
+``C:\yen Program Files (x86)\yen TeraPad'' が環境変数''Path'' に
 登録された。
 
 \vspace{3mm}
@@ -290,7 +285,7 @@ Windowsには ``システム環境変数''という仕組みがあり、そこ�
 
 
 \vspace{3mm}
-\includegraphics[width=12cm]{img/cmd-14-hello.png}
+\includegraphics[width=14cm]{img/cmd-14-terapad.png}
 \vspace{3mm}
 
 \newpage
@@ -345,7 +340,7 @@ Windowsには ``システム環境変数''という仕組みがあり、そこ�
 とすると、``dir''で表示される内容を ``dir.txt'' というファイルに保存できる。
 
 ただ、このコマンドを実行している場所(ディレクトリあるいはフォルダ) に保存される。
-``C:\yen Users\yen USER''(ホーム)で実行しているなら、その場所に保存される。
+``C:\yen Users\yen user''(ホーム)で実行しているなら、その場所に保存される。
 
 システム環境変数の一覧を見たい場合も
 
@@ -437,4 +432,4 @@ Wifiを使用しているなら、``Wireless LAN adapter Wi-Fi'' の項目を見
 
 \include{end}
 
-%% 修正時刻： Fri 2022/08/12 09:34:322
+%% 修正時刻： Sat 2022/08/13 10:48:072
