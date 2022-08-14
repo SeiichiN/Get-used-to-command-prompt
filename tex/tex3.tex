@@ -2,6 +2,7 @@
 
 \include{begin}
 
+\vspace{6mm}
 \section{バッチファイル}
 
 \subsection{コマンドを作成する}
@@ -11,7 +12,6 @@
 保存先は デスクトップ にしておく。
 
 \begin{lstlisting}[caption=hello.bat]
- @echo off
  echo こんにちは
 \end{lstlisting}
 
@@ -43,11 +43,40 @@
 
 hello.bat は以下のようにして実行できる。
 
-\fbox{hello}
+$>$ \fbox{hello}
 
 \vspace{3mm}
-\includegraphics[width=15cm]{img/cmd-05-hello.png}
+\includegraphics[width=15cm]{img/hello-01.png}
 \vspace{3mm}
+
+画面に \fbox{ echo こんにちは } と表示されてから \fbox{ こんにちは } と
+表示されている。
+\fbox{ echo こんにちは } が表示されないようにするには、
+以下のようにする。
+
+\begin{lstlisting}[caption=hello.bat]
+ echo off
+ echo こんにちは
+\end{lstlisting}
+
+\vspace{3mm}
+\includegraphics[width=15cm]{img/hello-02.png}
+\vspace{3mm}
+
+\fbox{ echo こんにちは } は消えたけれど、かわりに \fbox{ echo off } が
+表示されてしまった。
+それも表示されないようにするには、echo off の先頭に "@" をつける。
+
+\begin{lstlisting}[caption=hello.bat]
+ @echo off
+ echo こんにちは
+\end{lstlisting}
+
+\vspace{3mm}
+\includegraphics[width=15cm]{img/hello-03.png}
+\vspace{3mm}
+
+
 
 \subsection{バッチファイル}
 
@@ -60,12 +89,10 @@ hello.bat は以下のようにして実行できる。
 
 拡張子は ``.bat''である。
 
-``echo off'' は、コマンド文字列を画面に表示させないためのものである。
-``@'' は、そのコマンドを画面に表示させないためのものである。
 
 
 
 
 \include{end}
 
-%% 修正時刻： Sat 2022/08/13 10:48:070
+%% 修正時刻： Mon Aug 15 06:45:49 2022
